@@ -1,4 +1,4 @@
-# 🌍 AetherSense AI
+# 🌍 satellite-weather-monitor
 ## Weather Satellite Simulation & Telemetry Dashboard
 
 AetherSense AI is a premium, interactive weather satellite telemetry and precipitation simulation dashboard. Built entirely with vanilla web technologies, it simulates a geostationary meteorological satellite scanning Earth, generating procedural multispectral imagery, atmospheric telemetry, and precipitation estimates using a client-side climate simulation engine.
