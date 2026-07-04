@@ -1,118 +1,344 @@
-# AetherSense AI: Weather Satellite Simulation & Telemetry Dashboard
+# 🌍 AetherSense AI
+## Weather Satellite Simulation & Telemetry Dashboard
 
-**AetherSense AI** is a premium, interactive weather satellite telemetry and precipitation simulation control room. Built entirely in vanilla client-side technologies, it models a geostationary meteorological satellite scanning Earth coordinates and runs a local, offline climate physics engine to predict precipitation rates and profile historical decadal patterns.
+AetherSense AI is a premium, interactive weather satellite telemetry and precipitation simulation dashboard. Built entirely with vanilla web technologies, it simulates a geostationary meteorological satellite scanning Earth, generating procedural multispectral imagery, atmospheric telemetry, and precipitation estimates using a client-side climate simulation engine.
 
----
-
-## Technical Honesty & Simulation Disclaimer
-**IMPORTANT NOTE**: *This application is a mathematical simulation. Atmospheric calculations, cloud sensor images, and precipitation predictions are generated procedurally based on rule-based equations (2D noise filters, latitude constraints, and geographical parameters) and do not represent real-time live satellite measurements or a trained machine learning model. It is designed to demonstrate UI/UX design, modular system architecture, and telemetry visual rendering.*
+> **Status:** 🚧 Under Development
 
 ---
 
-## Features
+## 📖 Overview
 
-1. **Interactive Target Scan Map (Leaflet.js)**:
-   - Drag, zoom, and select any coordinates on a dark-themed world map.
-   - Includes manual coordinate search coordinates and coordinates synchronization.
-   - Renders an animated custom targeting reticle overlay with a pulsing radar scan.
-   - Toggles between **Google Maps Satellite Hybrid** (satellite photography + boundary layers) and **Google Maps Roadmap** vector tiles.
+The application combines interactive cartography, procedural graphics, climate simulation, and real-time telemetry into a modern space-agency-inspired control room interface.
 
-2. **Multispectral Live Feed Canvas**:
-   - Renders dynamic procedural clouds and wind drift at 1 FPS using **2D Fractal Brownian Motion (FBM) Perlin Noise**.
-   - Supports 4 spectral band views:
-     - **Visible (VIS)**: True-color cloud thickness and shadows.
-     - **Infrared (IR)**: Temperature-calibrated heights (colder convective cloud tops render violet/cyan).
-     - **Water Vapor (WV)**: Middle-to-upper atmospheric water vapor concentration streams.
-     - **Radar (RADAR)**: Direct precipitation cores (light green, moderate yellow, convective red).
-
-3. **Procedural Climate Engine**:
-   - Simulates realistic meteorological conditions (Temperature, Humidity, Pressure, Wind, Rain) client-side.
-   - Calculates atmospheric properties based on geography:
-     - **Latitude**: Thermal gradients decreasing from equator to poles.
-     - **Climate Zone**: Automatically maps coordinates into Köppen zones (Tropical, Arid, Temperate, Continental, Polar).
-     - **Elevation & Ocean Distance**: Elevation decreases temperature (lapse rate) and pressure, while ocean proximity dampens seasonal swings.
-     - **Seasonality**: Sine/cosine vectors simulate yearly month-to-month solar angle offsets.
-     - **Historical Anomaly**: Adapts conditions based on the selected year's historical climate indices (e.g. 2016 Super El Niño, 2022 Triple-Dip La Niña, 2026 Solar Max Peak).
-
-4. **Simulated Predictive Engine**:
-   - Simulates a Convolutional Neural Network extraction pipeline.
-   - Calculates cloud optical thickness, moisture indices, and cloud-top temperatures from active spectral frames.
-   - Maps inputs to precipitation classification (None, Light, Moderate, Heavy), mm/hour intensity values, and confidence scores (which fluctuate based on sensor noise and band suitability).
-   - Displays real-time model telemetry, input tensors, and latent space weights.
-
-5. **3-Day Future Outlook Forecast**:
-   - Simulates localized weather front progressions to predict Day +1, Day +2, and Day +3 temperatures, rain probabilities, and rain classes.
-
-6. **State Management & Performance Guardrails**:
-   - **Central Pub-Sub Store** (`js/state.js`) coordinates all state updates (coordinates, active year, active band, seconds tick) in a decoupled, event-driven pattern.
-   - **Lazy Rendering**: Canvas calculations render *only* when the canvas panel is active in the viewport.
-   - **Throttling**: Chart.js updates are throttled to 1 tick/second max to minimize re-renders.
-   - **Debouncing**: Suggestion dropdown queries and marker updates are debounced by 150ms on search key entries.
+Users can select any location on Earth to visualize simulated satellite imagery, analyze atmospheric conditions, explore historical climate trends, and generate a 3-day weather outlook.
 
 ---
 
-## Technology Stack
+# ⚠️ Simulation Disclaimer
 
-- **Structure**: HTML5 (Semantic elements)
-- **Styling**: Vanilla CSS3 (Glassmorphism, CSS Grid & Flexbox, Neon colors, Glow effects, Web animations, Responsive media queries)
-- **Scripting**: Vanilla JavaScript (ES6 Modules, Canvas API, seeded random generation)
-- **Libraries (CDN)**:
-  - Leaflet.js (Map interface)
-  - Chart.js (Graphical telemetry)
-  - Bootstrap Icons (Interface icons)
+**AetherSense AI is an educational visualization project.**
+
+It **does not use live satellite feeds, real meteorological datasets, or trained machine learning models.**
+
+Instead, weather conditions are generated procedurally using:
+
+- Fractal Brownian Motion (FBM)
+- Perlin Noise
+- Latitude & longitude constraints
+- Climate zone mapping
+- Seasonal mathematical models
+- Historical anomaly simulations
+
+The project demonstrates:
+
+- Modern UI/UX
+- Canvas rendering
+- Modular JavaScript architecture
+- Client-side simulation techniques
+- Interactive geospatial visualization
 
 ---
 
-## File Structure
+# ✨ Features
+
+## 🛰️ Interactive Weather Map
+
+- Dark themed Leaflet.js world map
+- Coordinate selection by clicking
+- Manual latitude & longitude search
+- Animated targeting reticle
+- Live coordinate synchronization
+
+Supports:
+
+- Google Satellite Hybrid
+- Google Roadmap
+- MapTiler
+- Offline fallback mode
+
+---
+
+## 🌤️ Multispectral Satellite Feed
+
+Procedurally generated satellite imagery updated every second.
+
+Available spectral modes:
+
+- 🌞 Visible (VIS)
+- 🌡️ Infrared (IR)
+- 💧 Water Vapor (WV)
+- 🌧️ Radar (RADAR)
+
+Clouds are generated using Fractal Brownian Motion and animated wind fields.
+
+---
+
+## 🌦️ Climate Simulation Engine
+
+Generates atmospheric conditions using:
+
+- Latitude
+- Longitude
+- Climate Zone
+- Elevation
+- Ocean proximity
+- Seasonal cycles
+- Historical anomalies
+
+Produces:
+
+- Temperature
+- Humidity
+- Pressure
+- Wind Speed
+- Cloud Density
+- Rain Probability
+- Rainfall (mm/hr)
+
+---
+
+## 🤖 Simulated AI Prediction Engine
+
+Imitates an AI inference pipeline by calculating:
+
+- Cloud optical thickness
+- Moisture indices
+- Convective potential
+- Cloud-top temperature
+- Sensor confidence
+
+Outputs:
+
+- Rain Probability
+- Rainfall Intensity
+- Rainfall (mm/hr)
+- Confidence Score
+
+Rainfall Classes:
+
+- None
+- Light
+- Moderate
+- Heavy
+
+---
+
+## 📅 Historical Climate Timeline
+
+Explore simulated historical weather conditions from:
+
+**2016 → 2026**
+
+Includes:
+
+- Historical satellite imagery
+- Annual rainfall
+- Temperature trends
+- Climate anomalies
+
+---
+
+## 📈 Live Telemetry Dashboard
+
+Real-time HUD displaying:
+
+- Temperature
+- Pressure
+- Humidity
+- Wind Speed
+- Rainfall
+- Cloud Cover
+- Sensor Noise
+- Signal Strength
+- Orbital Status
+
+---
+
+## 📊 Weather Analytics
+
+Interactive Chart.js visualizations:
+
+- Rainfall Trends
+- Temperature History
+- Pressure Variation
+- Humidity Trends
+- Historical Anomalies
+
+---
+
+## 🔮 3-Day Outlook
+
+Simulated localized forecast including:
+
+- Day +1
+- Day +2
+- Day +3
+
+For each day:
+
+- Temperature
+- Rain Probability
+- Rainfall
+- Weather Class
+
+---
+
+# ⚙️ Architecture
+
+State management follows a lightweight Pub-Sub architecture.
 
 ```
+User Input
+      │
+      ▼
+State Manager
+      │
+ ┌────┴───────────────┐
+ │                    │
+ ▼                    ▼
+Leaflet Map      Climate Engine
+ │                    │
+ ▼                    ▼
+Satellite Feed   AI Predictor
+ │                    │
+ └──────┬─────────────┘
+        ▼
+ Telemetry Dashboard
+        ▼
+    Chart.js
+```
+
+---
+
+# 🚀 Technology Stack
+
+### Frontend
+
+- HTML5
+- CSS3
+- Vanilla JavaScript (ES Modules)
+
+### Graphics
+
+- HTML5 Canvas API
+
+### Libraries
+
+- Leaflet.js
+- Chart.js
+- Bootstrap Icons
+
+---
+
+# 📂 Project Structure
+
 satellite-weather-monitor/
-├── index.html                  # Core layout and structural grids
-├── style.css                   # Space control room visual design & animation keyframes
-├── app.js                      # Central orchestrator coordinating simulation updates & UI bindings
+│
+├── index.html
+├── style.css
+├── app.js
+│
 ├── js/
-│   ├── state.js                # Central Pub-Sub state manager
-│   ├── map.js                  # Leaflet map configuration and coordinate sync
-│   ├── satellite-feed.js       # Canvas multi-spectral procedural animation
-│   ├── climate-engine.js       # Geographic climate generator & 3-day forecast outlook
-│   ├── ai-predictor.js         # Simulated deep learning inference
-│   ├── telemetry.js            # HUD details and bottom terminal logging
-│   ├── charts.js               # Chart.js live and 10-year trend graphs
-│   ├── history.js              # Timeline slider and decadal data aggregation
-│   └── utils.js                # Perlin noise generator, math conversions, and MAP_CONFIG
+│   ├── state.js
+│   ├── map.js
+│   ├── satellite-feed.js
+│   ├── climate-engine.js
+│   ├── ai-predictor.js
+│   ├── telemetry.js
+│   ├── charts.js
+│   ├── history.js
+│   └── utils.js
+│
 ├── data/
-│   ├── climate-zones.json      # Baseline climate zones configuration
-│   ├── monthly-patterns.json   # Seasonal hemispheric offsets
-│   ├── historical-simulation.json # Historical climate anomalies (2016-2026)
-│   └── cities.json             # Pre-seeded list of 45+ global cities & coordinates
-└── README.md                   # Project documentation
-```
+│   ├── climate-zones.json
+│   ├── monthly-patterns.json
+│   ├── historical-simulation.json
+│   └── cities.json
+│
+├── assets/
+│
+└── README.md
 
----
 
-## Map Tile Provider Settings & Known Limitations
+# 🖥️ Running Locally
 
-The map supports a dual-mode provider configuration in `js/utils.js`:
-- **Google Dev Mode** (`MAP_PROVIDER: 'google-dev'`): Loads Google roadmap and satellite hybrid tiles. This option is rate-limited and intended for development or prototype visualization.
-- **Production Mode** (`MAP_PROVIDER: 'maptiler'`): Production-safe MapTiler roadmap and satellite layers. Requires entering your API key in `MAPTILER_API_KEY`.
-- **Offline / Grid Fallback**: Leaflet falls back to local tile coordinates and CartoDB Dark Matter styles if network connectivity is lost.
+Because the project uses ES Modules (`import/export`), open it through a local web server.
 
----
+## Option 1 — Python
 
-## How to Run Locally
-
-Since the application uses ES Modules (`import`/`export`), web browsers restrict loading files directly from the local file system (`file://` protocol) due to CORS policies. You must run the application through a local web server:
-
-### Option 1: Python HTTP Server (Built-in)
-If you have Python installed, open terminal/command prompt, navigate to the folder, and run:
-```bash
+bash
 python -m http.server 8000
-```
-Then visit `http://localhost:8000` in your web browser.
+
+Visit:
+
+
+http://localhost:8000
+
+
+## Option 2 — VS Code Live Server
+
+1. Install **Live Server**
+2. Open the project in VS Code
+3. Right-click `index.html`
+4. Select **Open with Live Server**
 
 ---
 
-## Responsive Breakpoints
-- **Desktop (>1200px)**: 3-column control center layout.
-- **Tablet (768px - 1200px)**: 2-column layout. The map and search occupy the left column; the canvas and metrics occupy the right column; log consoles stack underneath.
-- **Mobile (<768px)**: Single-column vertical stack with **HUD Tab Navigation** (tabs toggle between Map view, Satellite Feed, and Predictive Console) to maximize screen area.
+# 🌍 Map Providers
+
+Supported providers:
+
+- Google Hybrid
+- Google Roadmap
+- MapTiler
+- CartoDB Dark Matter
+
+Production deployments should use a valid **MapTiler API key**.
+
+---
+
+# 📱 Responsive Design
+
+| Device | Layout |
+|---------|--------|
+| Desktop | 3-column control room |
+| Tablet | 2-column dashboard |
+| Mobile | Single-column with tab navigation |
+
+---
+
+# 🚀 Future Improvements
+
+- 3D Earth (Three.js)
+- WebGL cloud rendering
+- Wind particle animation
+- Lightning simulation
+- Storm tracking
+- Hurricane visualization
+- Day/Night Earth
+- Terrain shading
+- Progressive Web App (PWA)
+- Offline caching
+- PDF report export
+- Weather alert system
+
+---
+
+# 📸 Screenshots
+
+Screenshots will be added as development progresses.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 👨‍💻 Author
+
+**Sujith Kumar**
+
+- GitHub: https://github.com/sujith2325
