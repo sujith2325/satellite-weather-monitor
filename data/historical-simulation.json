@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "provenance": "Synthetic dataset generated via seeded procedural noise to emulate plausible 2016–2026 anomaly trends; not derived from real satellite records."
+  },
+  "years": {
+    "2016": {
+      "climateIndex": "Strong El Niño",
+      "tempAnomaly": 1.2,
+      "precipAnomaly": 1.15,
+      "description": "One of the warmest years on record due to an exceptionally strong El Niño event, driving heavy precipitation in Pacific coastal regions and dry anomalies in Southeast Asia.",
+      "notableEvents": ["Super El Niño Peaks", "Global Coral Bleaching Event"]
+    },
+    "2017": {
+      "climateIndex": "Neutral / Weak La Niña",
+      "tempAnomaly": 0.9,
+      "precipAnomaly": 0.98,
+      "description": "Transition to a neutral state with weak cooling in the eastern Pacific. Characterized by severe wildfire seasons in Western North America and Southern Europe.",
+      "notableEvents": ["Hurricane Harvey", "Southern Europe Drought"]
+    },
+    "2018": {
+      "climateIndex": "Weak La Niña",
+      "tempAnomaly": 0.82,
+      "precipAnomaly": 1.02,
+      "description": "La Niña conditions bring wetter conditions to Australia and parts of Brazil, with cooler global surface temperatures relative to recent years.",
+      "notableEvents": ["Queensland Flooding", "Camp Fire (California)"]
+    },
+    "2019": {
+      "climateIndex": "Weak El Niño",
+      "tempAnomaly": 1.05,
+      "precipAnomaly": 0.94,
+      "description": "Weak warm phase leads to significant droughts in Australia (driving the Black Summer bushfires) and warm temperature records in Africa and Europe.",
+      "notableEvents": ["Australian Black Summer Bushfires", "European Heatwave"]
+    },
+    "2020": {
+      "climateIndex": "Moderate La Niña",
+      "tempAnomaly": 1.02,
+      "precipAnomaly": 1.12,
+      "description": "A moderate La Niña develops. Despite Pacific cooling, global temperatures remain high, matching 2016. High tropical cyclone activity in the Atlantic.",
+      "notableEvents": ["Record Atlantic Hurricane Season", "Siberian Heatwave"]
+    },
+    "2021": {
+      "climateIndex": "La Niña",
+      "tempAnomaly": 0.85,
+      "precipAnomaly": 1.08,
+      "description": "Double-dip La Niña brings cool sea surface temperatures in the equatorial Pacific, intense rainfall in Australia and Southeast Asia, and cold waves in Texas.",
+      "notableEvents": ["North American Cold Wave", "Henan Floods"]
+    },
+    "2022": {
+      "climateIndex": "La Niña (Triple-Dip)",
+      "tempAnomaly": 0.92,
+      "precipAnomaly": 1.10,
+      "description": "Rare third consecutive year of La Niña conditions. Heavy flooding hits Pakistan and East Australia, while extreme droughts worsen in the Horn of Africa.",
+      "notableEvents": ["Pakistan Floods", "East Australian Floods"]
+    },
+    "2023": {
+      "climateIndex": "Super El Niño Transition",
+      "tempAnomaly": 1.45,
+      "precipAnomaly": 0.92,
+      "description": "Rapid development of a strong El Niño. Global temperatures smash records, causing unprecedented heatwaves across Europe, North America, and South America.",
+      "notableEvents": ["Hottest Year on Record", "Amazon Basin Drought"]
+    },
+    "2024": {
+      "climateIndex": "El Niño / La Niña Transition",
+      "tempAnomaly": 1.30,
+      "precipAnomaly": 1.05,
+      "description": "El Niño dissipates by mid-year, transitioning rapidly into La Niña. Extreme precipitation events hit parts of Europe and Asia, while high sea surface temperatures trigger heavy monsoons.",
+      "notableEvents": ["Record Atlantic Hurricane Beryl", "Southern Brazil Floods"]
+    },
+    "2025": {
+      "climateIndex": "Moderate La Niña",
+      "tempAnomaly": 1.10,
+      "precipAnomaly": 1.14,
+      "description": "Established La Niña conditions promote heavy precipitation over Northern South America and Southeast Asia, while bringing drier weather to the southern USA.",
+      "notableEvents": ["Southeast Asia Typhoon Surge", "East African Monsoon Deluge"]
+    },
+    "2026": {
+      "climateIndex": "Solar Maximum Peak (Current)",
+      "tempAnomaly": 1.25,
+      "precipAnomaly": 1.01,
+      "description": "High solar activity during the solar cycle peak, causing minor magnetosphere warming, alongside neutral ENSO conditions. Stabilized temperature anomalies.",
+      "notableEvents": ["Aurora Borealis at Mid-Latitudes", "Simulated Weather Peak"]
+    }
+  }
+}

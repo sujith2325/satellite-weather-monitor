@@ -1,0 +1,69 @@
+{
+  "zones": [
+    {
+      "id": "tropical",
+      "name": "Tropical Zone",
+      "latMin": -23.5,
+      "latMax": 23.5,
+      "baseTempK": 300.15,
+      "tempRange": 3.0,
+      "baseHumidity": 80.0,
+      "basePressure": 1010.0,
+      "basePrecipitationMmHr": 3.5,
+      "rainProbability": 70.0,
+      "windSpeedRange": [5.0, 15.0]
+    },
+    {
+      "id": "arid",
+      "name": "Arid / Desert Zone",
+      "latMin": -35.0,
+      "latMax": 35.0,
+      "baseTempK": 305.15,
+      "tempRange": 15.0,
+      "baseHumidity": 20.0,
+      "basePressure": 1015.0,
+      "basePrecipitationMmHr": 0.05,
+      "rainProbability": 5.0,
+      "windSpeedRange": [10.0, 30.0]
+    },
+    {
+      "id": "temperate",
+      "name": "Temperate Zone",
+      "latMin": -50.0,
+      "latMax": 50.0,
+      "baseTempK": 288.15,
+      "tempRange": 10.0,
+      "baseHumidity": 65.0,
+      "basePressure": 1013.25,
+      "basePrecipitationMmHr": 1.2,
+      "rainProbability": 45.0,
+      "windSpeedRange": [8.0, 22.0]
+    },
+    {
+      "id": "continental",
+      "name": "Continental Zone",
+      "latMin": -70.0,
+      "latMax": 70.0,
+      "baseTempK": 278.15,
+      "tempRange": 20.0,
+      "baseHumidity": 60.0,
+      "basePressure": 1011.0,
+      "basePrecipitationMmHr": 0.8,
+      "rainProbability": 35.0,
+      "windSpeedRange": [10.0, 25.0]
+    },
+    {
+      "id": "polar",
+      "name": "Polar Zone",
+      "latMin": -90.0,
+      "latMax": 90.0,
+      "baseTempK": 253.15,
+      "tempRange": 12.0,
+      "baseHumidity": 40.0,
+      "basePressure": 1008.0,
+      "basePrecipitationMmHr": 0.1,
+      "rainProbability": 15.0,
+      "windSpeedRange": [12.0, 35.0]
+    }
+  ]
+}

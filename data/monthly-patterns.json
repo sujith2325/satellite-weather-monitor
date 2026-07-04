@@ -1,0 +1,32 @@
+{
+  "hemispheres": {
+    "northern": [
+      { "month": 1, "name": "January", "tempOffset": -8.0, "precipMult": 0.8, "humidOffset": 5.0 },
+      { "month": 2, "name": "February", "tempOffset": -6.0, "precipMult": 0.9, "humidOffset": 3.0 },
+      { "month": 3, "name": "March", "tempOffset": -2.0, "precipMult": 1.1, "humidOffset": 0.0 },
+      { "month": 4, "name": "April", "tempOffset": 3.0, "precipMult": 1.3, "humidOffset": -2.0 },
+      { "month": 5, "name": "May", "tempOffset": 8.0, "precipMult": 1.2, "humidOffset": -4.0 },
+      { "month": 6, "name": "June", "tempOffset": 12.0, "precipMult": 1.0, "humidOffset": -2.0 },
+      { "month": 7, "name": "July", "tempOffset": 14.0, "precipMult": 0.9, "humidOffset": 0.0 },
+      { "month": 8, "name": "August", "tempOffset": 13.0, "precipMult": 1.0, "humidOffset": 2.0 },
+      { "month": 9, "name": "September", "tempOffset": 8.0, "precipMult": 1.1, "humidOffset": 3.0 },
+      { "month": 10, "name": "October", "tempOffset": 3.0, "precipMult": 1.2, "humidOffset": 4.0 },
+      { "month": 11, "name": "November", "tempOffset": -3.0, "precipMult": 1.0, "humidOffset": 5.0 },
+      { "month": 12, "name": "December", "tempOffset": -7.0, "precipMult": 0.8, "humidOffset": 6.0 }
+    ],
+    "southern": [
+      { "month": 1, "name": "January", "tempOffset": 14.0, "precipMult": 0.9, "humidOffset": 0.0 },
+      { "month": 2, "name": "February", "tempOffset": 13.0, "precipMult": 1.0, "humidOffset": 2.0 },
+      { "month": 3, "name": "March", "tempOffset": 8.0, "precipMult": 1.1, "humidOffset": 3.0 },
+      { "month": 4, "name": "April", "tempOffset": 3.0, "precipMult": 1.2, "humidOffset": 4.0 },
+      { "month": 5, "name": "May", "tempOffset": -3.0, "precipMult": 1.0, "humidOffset": 5.0 },
+      { "month": 6, "name": "June", "tempOffset": -7.0, "precipMult": 0.8, "humidOffset": 6.0 },
+      { "month": 7, "name": "July", "tempOffset": -8.0, "precipMult": 0.8, "humidOffset": 5.0 },
+      { "month": 8, "name": "August", "tempOffset": -6.0, "precipMult": 0.9, "humidOffset": 3.0 },
+      { "month": 9, "name": "September", "tempOffset": -2.0, "precipMult": 1.1, "humidOffset": 0.0 },
+      { "month": 10, "name": "October", "tempOffset": 3.0, "precipMult": 1.3, "humidOffset": -2.0 },
+      { "month": 11, "name": "November", "tempOffset": 8.0, "precipMult": 1.2, "humidOffset": -4.0 },
+      { "month": 12, "name": "December", "tempOffset": 12.0, "precipMult": 1.0, "humidOffset": -2.0 }
+    ]
+  }
+}
